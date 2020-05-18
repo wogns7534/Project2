@@ -31,6 +31,7 @@ int main(){
 void filestat1(){
 	const char* filename = "./text1";
 
+	if (stat(filename, &stat1)) {
 		printf("This file does not exist.\n");
 	}
 }
