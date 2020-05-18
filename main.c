@@ -29,12 +29,20 @@ int main(){
 
 //파일 1의 정보를 가져오는 함수 작성
 void filestat1(){
-    
+	const char* filename = "./text1";
+
+	if (stat(filename, &stat1)) {
+		printf("This file does not exist.\n");
+	}
 }
 
 //파일 2의 정보를 가져오는 함수 작성
 void filestat2(){
-    
+	const char* filename = "./text2";
+
+	if (stat(filename, &stat2)) {
+		printf("This file does not exist.\n");
+	}
 }
 
 //파일 1의 시간 정보를 가져오는 함수 작성
@@ -44,7 +52,9 @@ void filetime1(){
 
 //파일 2의 시간 정보를 가져오는 함수 작성
 void filetime2(){
-    
+	static struct tm time_2;
+	time_2 = *(localtime(&stat2.st_mtime));
+	time2 = &time_2;
 }
 
 //두 개의 파일 크기를 비교하는 함수 작성
