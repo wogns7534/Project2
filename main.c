@@ -63,9 +63,9 @@ void filetime2(){
 void sizecmp(){
 	printf("3. size compare\n");
 	if (stat1.st_size > stat2.st_size)
-		printf("The file size of text1 is bigger\n");
+		printf("text1 is bigger\n");
 	else if (stat1.st_size < stat2.st_size)
-		printf("The file size of text2 is bigger\n");
+		printf("text2 is bigger\n");
 	else
 		printf("sizes are equal\n");
 }
