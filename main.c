@@ -47,7 +47,9 @@ void filestat2(){
 
 //파일 1의 시간 정보를 가져오는 함수 작성
 void filetime1(){
-    
+	static struct tm time_1;
+	time_1 = *(localtime(&stat1.st_mtime));
+	time1 = &time_1;
 }
 
 //파일 2의 시간 정보를 가져오는 함수 작성
