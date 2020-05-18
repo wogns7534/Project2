@@ -89,7 +89,7 @@ void datecmp(){
 		else if (time1->tm_mday > time2->tm_mday)
 			printf("text2 is early\n");
 		else
-			printf("same time\n");
+			printf("same date\n");
 
 	}
 }
