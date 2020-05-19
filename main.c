@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
@@ -78,12 +78,12 @@ void blockcmp(){
 	else if (stat1.st_blocks < stat2.st_blocks)
 		printf("text2 is bigger\n");
 	else
-		printf("sizes are equal\n");
+		printf("numbers are equal\n");
 }
 
 //두 개의 파일 수정 날짜를 비교하는 함수 작성
 void datecmp(){
-	
+
 	printf("5. date compare\n");
 	if (time1->tm_mon < time2->tm_mon)
 		printf("text1 is early\n");
@@ -95,7 +95,7 @@ void datecmp(){
 		else if (time1->tm_mday > time2->tm_mday)
 			printf("text2 is early\n");
 		else
-			printf("same time\n");
+			printf("same date\n");
 
 	}
 }
@@ -103,7 +103,7 @@ void datecmp(){
 //두 개의 파일 수정 시간을 비교하는 함수 작성
 void timecmp(){
 	printf("6. time compare\n");
-	
+
 	if (time1->tm_hour < time2->tm_hour)
 		printf("text1 is early\n");
 	else if (time1->tm_hour > time2->tm_hour)
@@ -111,8 +111,8 @@ void timecmp(){
 	else {	// 만일 '시간'이 같을 경우 '분' 비교
 		if (time1->tm_min < time2->tm_min)
 			printf("text1 is early\n");
-		else if (time1->tm_min > time2->tm_min) 
-			printf("same time\n");
+		else if (time1->tm_min > time2->tm_min)
+			printf("text2 is early\n");
 		else
 			printf("same time\n");
 	}
